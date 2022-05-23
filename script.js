@@ -7,6 +7,10 @@ const shareIcon = document.querySelector(".shareicon");
 const closeIcon = document.querySelector(".close");
 const copyLink = document.querySelector(".copy");
 const copyText = document.querySelector(".copy-text");
+const closeShare = document.querySelector(".share-box .close");
+closeShare.addEventListener("click", function () {
+  shareNav.classList.toggle("active");
+});
 copyLink.addEventListener("click", function () {
   copyText.innerText = "Copied!";
   navigator.clipboard.writeText(factText.innerText);

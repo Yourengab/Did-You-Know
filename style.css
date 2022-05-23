@@ -86,7 +86,7 @@ body {
   font-size: 18px;
 }
 .share-box {
-  transform: translateY(1000%);
+  transform: translateY(500%);
   width: 40%;
   background-color: #0d1c3a;
   padding: 10px;
@@ -97,6 +97,7 @@ body {
   border-radius: 5px;
   transition: 300ms ease-in-out;
   position: absolute;
+  opacity: 0;
 }
 .copy,
 .facebook,
@@ -106,13 +107,26 @@ body {
 .share-box p {
   font-size: 12px;
 }
+.share-box .close {
+  color: white;
+  position: absolute;
+  top: 50px;
+  font-size: 2rem;
+  display: none;
+}
+.share-box .close.active {
+  color: white;
+  position: absolute;
+  top: 50px;
+  font-size: 2rem;
+}
 .share-box a {
   text-decoration: none;
   color: white;
 }
 .share-box.active {
-  transform: translateY(0%);
-  bottom: 20px;
+  transform: translateY(480%);
+  opacity: 1;
 }
 @media screen and (max-width: 900px) {
   .fact-box {
@@ -130,10 +144,26 @@ body {
     font-size: 26px;
   }
   .share-box {
-    width: 50%;
+    width: 60%;
   }
   .fact-box p {
     margin-top: 10px;
     width: 80%;
+  }
+}
+@media screen and (max-height: 680px) {
+  .share-box {
+    width: 100vw;
+    padding: 10px 0;
+    border-radius: 0;
+    height: 100vh;
+    align-items: center;
+  }
+  .share-box.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .share-box .close {
+    display: inherit;
   }
 }
