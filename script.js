@@ -10,6 +10,9 @@ const copyText = document.querySelector(".copy-text");
 const closeShare = document.querySelector(".share-box .close");
 closeShare.addEventListener("click", function () {
   shareNav.classList.toggle("active");
+  shareIcon.classList.toggle("miss");
+
+  closeIcon.classList.toggle("show");
 });
 copyLink.addEventListener("click", function () {
   copyText.innerText = "Copied!";
